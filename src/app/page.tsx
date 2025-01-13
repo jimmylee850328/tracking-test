@@ -46,6 +46,15 @@ export default function Home() {
               →
             </span>
           </Link>
+          <Link
+            href="/refresh"
+            className="p-6 bg-orange-500 text-white rounded-lg shadow-lg hover:bg-orange-600 transition-all flex items-center justify-between group"
+          >
+            <span className="text-xl">前往重新整理測試頁面</span>
+            <span className="group-hover:translate-x-2 transition-transform">
+              →
+            </span>
+          </Link>
         </div>
       </div>
     </main>
