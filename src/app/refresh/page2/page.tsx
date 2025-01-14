@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-export const dynamic = "force-dynamic";
+"use client";
 
 export default function RefreshPage2() {
   const randomNumber = Math.floor(Math.random() * 1000);
@@ -20,22 +18,22 @@ export default function RefreshPage2() {
               這個數字在每次訪問時都會改變，證明頁面被重新載入
             </p>
           </div>
-          <Link
-            href="/refresh"
+          <button
+            onClick={() => (window.location.href = "/refresh")}
             className="p-4 bg-white text-orange-600 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center gap-2 border border-orange-200"
           >
             <span>←</span>
             <span>返回上一頁</span>
-          </Link>
-          <Link
-            href="/refresh/page1"
+          </button>
+          <button
+            onClick={() => (window.location.href = "/refresh/page1")}
             className="p-4 bg-orange-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-between group"
           >
             <span>前往子頁面 1</span>
             <span className="group-hover:translate-x-2 transition-transform">
               →
             </span>
-          </Link>
+          </button>
         </div>
       </div>
     </main>
