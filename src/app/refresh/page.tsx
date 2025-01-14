@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function RefreshPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 p-8">
