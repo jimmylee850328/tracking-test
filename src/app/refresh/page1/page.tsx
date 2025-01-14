@@ -1,6 +1,10 @@
 "use client";
 
 export default function RefreshPage1() {
+  const handleNavigation = (path: string) => {
+    window.location.href = path;
+  };
+
   const randomNumber = Math.floor(Math.random() * 1000);
 
   return (
@@ -19,14 +23,14 @@ export default function RefreshPage1() {
             </p>
           </div>
           <button
-            onClick={() => (window.location.href = "/refresh")}
+            onClick={() => handleNavigation("/refresh")}
             className="p-4 bg-white text-orange-600 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center gap-2 border border-orange-200"
           >
             <span>←</span>
             <span>返回上一頁</span>
           </button>
           <button
-            onClick={() => (window.location.href = "/refresh/page2")}
+            onClick={() => handleNavigation("/refresh/page2")}
             className="p-4 bg-orange-600 text-white rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-between group"
           >
             <span>前往子頁面 2</span>
